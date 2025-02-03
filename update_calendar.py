@@ -22,31 +22,27 @@ def convert_to_new_calendar():
     # Calculate the number of days passed since the base date
     delta_days = (today - BASE_DATE).days
 
-    total_leap_days = 0
+    # Calculate total leap days
+    leap_days = ((today.year - 2001) // LEAP_CYCLE_7) * 7
+    leap_days += ((today.year - 2001) // LEAP_CYCLE_28) * 7
+    delta_days -= leap_days  # Subtract leap days since they were added before
 
-    # Every 7 years, the 13th month has 35 days
-    total_leap_days += ((today.year - 2001) // LEAP_CYCLE_7) * 7
-
-    # Every 28 years, both the 12th and 13th months have 35 days (adding another 7 days)
-    total_leap_days += ((today.year - 2001) // LEAP_CYCLE_28) * 7
-
-    delta_days += total_leap_days
-
+    # Calculate the new Shine year
     new_year = 1 + (delta_days // DAYS_PER_YEAR)
     remaining_days = delta_days % DAYS_PER_YEAR
 
+    # Month lengths (default 28 days each)
     month_lengths = [DAYS_PER_MONTH] * 13
 
-    # Every 7 years, the 13th month extends to 35 days
+    # Adjust leap months
     if (new_year - 1) % LEAP_CYCLE_7 == 0:
-        month_lengths[12] = 35
+        month_lengths[12] = 35  # 13th month extends
 
-    # Every 28 years, both the 12th and 13th months extend to 35 days
     if (new_year - 1) % LEAP_CYCLE_28 == 0:
-        month_lengths[11] = 35
-        month_lengths[12] = 35
+        month_lengths[11] = 35  # 12th month extends
+        month_lengths[12] = 35  # 13th month extends
 
-    # Determine the current month and day
+    # Determine the month and day
     new_month = 1
     while remaining_days >= month_lengths[new_month - 1]:
         remaining_days -= month_lengths[new_month - 1]
