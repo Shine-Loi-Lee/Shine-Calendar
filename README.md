@@ -2,29 +2,22 @@
 
 Today is **[Monday, 24 - 10 - 22]**
 
-# Introduction
-What is the Shine Calendar?
+## 1. Introduction
+The Shine Calendar is a new conceptual calendar system that defines May 14, 2001, as Year 1, Month 1, Day 1. It provides consistency by maintaining fixed-length months. Unlike the Gregorian calendar, which has irregular month lengths, the Shine Calendar simplifies date calculations while ensuring long-term alignment with the Earth's orbit.
 
-Why was it created?
-
-# Calendar Structure
+## 2. Calendar Structure
 * Total Days in a Year: 364 (13 months x 28 days)
 * Each month has 28 days, except for leap adjustments.
 * Week structure remains consistent (Monday to Sunday).
 
-# Leap Year Rules
+### 2-1. Leap Year Rules
+The Shine Calendar follows a structured leap year system to maintain synchronization.
 * **Every 7 years**: The 13th month has 35 days instead of 28.
 * **Every 28 years**: Both the 12th and 13th months have 35 days instead of 28.
 
-# How the Calendar Works
-* The calendar begins on May 14, 2001 (Year 1, Month 1, Day 1).
-* Days progress sequentially without irregular month lengths.
-* Leap year calculations ensure consistent long-term alignment.
+## 3. Advantages of the Shine Calendar
+* Fixed-length months: All months have the same structure, eliminating inconsistencies.
+* Easy date calculations: No need to account for variable month lengths.
 
-# Advantages of the Shine Calendar
-* No irregular month lengths: Every month (except leap years) has exactly 4 weeks.
-* Easier date calculations: No need for 30/31-day month adjustments.
-* Weekday consistency: Every year starts on the same weekday.
-
-# License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
