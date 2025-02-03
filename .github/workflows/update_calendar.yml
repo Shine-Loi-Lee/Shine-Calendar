@@ -2,7 +2,7 @@ name: Update New Calendar Date
 
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '0 0 * * *'  # Runs at 00:00 UTC (09:00 KST)
   workflow_dispatch:
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}  # Use Personal Access Token (PAT)
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -25,6 +27,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git pull --rebase origin main  # Pull latest changes to prevent conflicts
+          
           git add README.md
-          git commit -m "Updated calendar date"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Updated calendar date" && git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/Shine-Loi-Lee/Shine-Calendar.git main)
