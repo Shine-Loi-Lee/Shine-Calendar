@@ -3,7 +3,7 @@
 Today is **[Monday, 24 - 10 - 22]**
 
 ## 1. Introduction
-The Shine Calendar is a new conceptual calendar system that defines May 14, 2001, as Year 1, Month 1, Day 1. It provides consistency by maintaining fixed-length months. Unlike the Gregorian calendar, which has irregular month lengths, the Shine Calendar simplifies date calculations while ensuring long-term alignment with the Earth's orbit.
+The Shine Calendar is a new conceptual calendar system that defines May 14, 2001, as Year 1, Month 1, Day 1. It provides consistency by maintaining fixed-length months. Unlike the Gregorian calendar, which has irregular month lengths, the Shine Calendar simplifies date calculations.
 
 ## 2. Calendar Structure
 * Total Days in a Year: 364 (13 months x 28 days)
