@@ -32,3 +32,4 @@ jobs:
           
           git add README.md
           git diff --quiet && git diff --staged --quiet || (git commit -m "Updated calendar date" && git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/Shine-Loi-Lee/Shine-Calendar.git main)
+          git push --force
