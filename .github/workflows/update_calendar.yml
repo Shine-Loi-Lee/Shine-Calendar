@@ -34,6 +34,6 @@ jobs:
           git stash pop || echo "No stash entries found"
 
           git add README.md
-          git diff --quiet && git diff --staged --quiet && exit 0  # 변경 사항 없으면 정상 종료
+          git diff --quiet && git diff --staged --quiet && exit 0
           
           git commit -m "Updated calendar date" && git push --force https://x-access-token:${{ secrets.GH_PAT }}@github.com/Shine-Loi-Lee/Shine-Calendar.git main
