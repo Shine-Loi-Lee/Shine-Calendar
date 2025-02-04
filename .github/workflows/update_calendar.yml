@@ -23,7 +23,7 @@ jobs:
       - name: Run script
         run: python update_calendar.py
 
-           - name: Commit and push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
