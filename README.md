@@ -1,6 +1,6 @@
 # Shine Calendar
 
-Today is **[Monday, 24 - 13 - 1]**
+Today is **[Tuesday, 24 - 13 - 2]**
 
 ## 1. Introduction
 The Shine Calendar is a new conceptual calendar system that defines May 14, 2001, as Year 1, Month 1, Day 1. It provides consistency by maintaining fixed-length months. Unlike the Gregorian calendar, which has irregular month lengths, the Shine Calendar simplifies date calculations.
